@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>≤‚ ‘2</title>
+    <script src="SSlib_V2.0/SSlibV2.js" type="text/javascript"></script>
+        <script src="anima.js" type="text/javascript"></script>
+    <style type="text/css">
+    .dd{
+    	border:1px blue solid; background:green; height:100px; width:100px;
+    	position:absolute
+    }
+    </style>
+    <script language="javascript">
+        SS(window).load(function () {
+            var dd = SS("#dd");
+            dd.center();
+            anima.Alpha({ ss: dd, now: 0, goal: 100, split: 1000 });
+            anima.size({ ss: dd,
+                goal: { w: 200, h: 200 },
+                split: 700,
+                phase: function () { dd.center(); },
+                callback: function () { dd.css("background", "red"); }
+            });
+            anima.size.defer(700, window, [{
+                ss: dd,
+                goal: { w: 210, h: 210 },
+                split: 100,
+                phase: function () { dd.center(); },
+                callback: function () { dd.css("background", "green"); }
+            }]);
+            anima.size.defer(800, window, [{
+                ss: dd,
+                goal: { w: 190, h: 190 },
+                split: 100,
+                phase: function () { dd.center(); },
+                callback: function () { dd.css("background", "red"); }
+            }]);
+            anima.size.defer(900, window, [{
+                ss: dd,
+                goal: { w: 200, h: 200 },
+                split: 100,
+                phase: function () { dd.center(); },
+                callback: function () { dd.css("background", "green"); }
+            }]);
+        })
+    </script>
+</head>
+<body>
+
+<div id="dd" class="dd"></div>
+</body>
+</html>

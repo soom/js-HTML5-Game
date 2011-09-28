@@ -1,0 +1,20 @@
+function run() {
+        var main = SS("#mainbox");
+        var next = SS("#nextBox");
+        for (var i = 0; i <= 3; i++)
+            for (var j = 0; j <= 3; j++) {
+                var span = next.addchild("span");
+                span.css({ left: j * 20 + j + "px", bottom: i * 20 + i + "px", backgroundColor: "#fff" });
+                span.prop("title",","+(i-1) + "," + (j-1));
+                span.click(function () {
+                    if (SS(this).css("backgroundColor") == "rgb(255, 255, 255)") {
+                        SS(this).css({ backgroundColor: "#000" });
+                        SS("#txt").val(SS("#txt").val() + SS(this).prop("title"));
+                    }
+                    else
+                        SS(this).css({ backgroundColor: "#fff" });
+                }) 
+            }
+        }
+
+//生成工具

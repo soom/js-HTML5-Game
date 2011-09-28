@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+    body{ background:#DFE8F6; color:#444;}
+    h1{text-align:center; color:#083772;}
+    #main{ margin:100px auto;  width:500px; list-style:none;}
+    #main li{list-style:none; border:1px solid #D0D0D0; margin:-1px 0px 0; background:#DFE8F6;}
+    #main li span{ color:#083772;font-size:13px;cursor:pointer;}
+    #main li div{ left:45px; position:relative;  top:3px;  font-size:13px;  overflow:hidden; line-height:20px; }
+    #main i{ font-style:normal; color:Black; cursor:pointer;}
+    a{ display:block; text-align:center; font-size:14px;}
+    </style>
+    <script src="SSlib_V2.0/SSlibV2.js" type="text/javascript"></script>
+    <script src="anima.js" type="text/javascript"></script>
+    <script language="javascript">
+        SS(window).load(function () {
+            SS("i").each(function () {
+                SS(this).click(function () {
+                    var obj = SS(this).next("div");
+                    obj.css("display","block");
+                    var height = obj.height();
+					 obj.css({visibility: ''});
+                    var w = obj.width();
+                    if (!obj.dom._height) {
+                        obj.dom._height = height;
+                        anima.size({ ss: obj, now: { w: w, h: obj.dom._height }, goal: { w: w, h:0 }, split: 300 });
+                        return;
+                    }
+                    if (height == 0) {
+                        anima.size({ ss: obj, now: { w: w, h: 0 }, goal: { w: w, h: obj.dom._height }, split: 300 });
+                    }
+                    else {
+                        anima.size({ ss: obj, now: { w: w, h: obj.dom._height }, goal: { w: w, h: 0 }, split: 300 });
+                    }
+                });
+            })
+            SS("span").each(function (o, i) {
+                var j = i;
+                SS(this).click(function () {
+                    if (j > 3) {
+                        switch (j) {
+                            case 4: window.location = "mine/index.html"; return;
+                            case 5: window.location = "Tetris/index.html"; return;
+							case 6: window.location = "llk/index.html"; return;
+                        }
+                    }
+                    else
+                        window.location = "dome" + j + ".htm";
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+<h1>个人作品</h1>
+<a>时间的沉淀，慢慢的在业余的时候制作点小东西娱乐下</a>
+<ul id="main">
+<li><span>例子1</span>：<i>幻灯片</i>
+<div>这里的幻灯片做在anima空间里做成了一个类，自动切换加淡出效果！</div>
+</li>
+<li><span>例子2</span>：<i>动画相关函数</i>
+<div>例子中演示了，动画在执行过程中同步执行的函数和回调函数效果！</div></li>
+<li><span>例子3</span>：<i>复合动画</i>
+<div>红色的边框的div演示了：大小变化、移动、淡入淡出效果<br/>绿色边框的div演示了动画的时间控制，并且应用了拖曳和鼠标改变大小效果！</div></li>
+<li><span>例子4</span>：<i>推箱子小游戏</i>
+<div>使用数组和表格做的推箱子小游戏，微型代码！</div></li>
+<li><span>例子5</span>：<i>扫雷</i>
+<div>windows系列的游戏扫雷，支持鼠标中键！</div></li>
+<li><span>例子6</span>：<i>俄罗斯方块</i>
+<div>经典小游戏，使用了框架！</div></li>
+<li><span>例子7</span>：<i>html5连连看</i>
+<div>使用html canvas绘制的图形，连连看的基本功能做出来了。没有准备关卡</div></li>
+</ul>
+</body>
+</html>

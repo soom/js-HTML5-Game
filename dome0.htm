@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>测试页面</title>
+<style  type="text/css"><!--
+#fader{position:relative;overflow:hidden;height:300px;width:500px; left:150px;}
+#fader li{position:absolute;left:0;top:0;}
+#fader ul,#fader li{list-style:none;margin:0;padding:0}
+#fader img{display:block; border-width:0;}
+#fader .sub{height:20px;position:absolute;width:500px;bottom:0;padding:4px 0 0 0;text-align:right; z-index:100;}
+#fader .sub i{
+	font-style:normal;
+	border:1px solid #444;
+	padding:1px 4px;
+	margin:2px;
+	font-size:12px;
+	line-height:14px;
+	color:Black;
+	z-index:1000;
+	position:relative;
+	cursor:pointer;
+}
+#fader .sub a{
+	color:#222;
+	position:absolute;
+	left:10px;
+	text-decoration:none;
+	bottom:2px;
+	}
+#fader .Alpha{filter :Alpha(opacity=50);opacity:0.5;background-color:white;}
+
+--></style>
+  <script src="SSlib_V2.0/SSlibV2.js" type="text/javascript"></script>
+  <script src="anima.js" type="text/javascript"></script>
+  <script language="javascript">
+      SS(window).load(function() {
+          f1 = new anima.fader();
+          f1.init({ id: "fader", split: 2000 });
+      });
+  </script>
+</head>
+
+<body>
+<div id="fader">
+	<ul>
+		<li><a href="1#"><img src="img/o_1.jpg" _href="1#" alt="我是图片一" /></a></li>
+		<li><a href="2#"><img src="img/o_2.jpg" _href="2#" alt="哈哈，图片二" /></a></li>
+		<li><a href="3#"><img src="img/o_3.jpg" _href="3#" alt="这是图片三" /></a></li>
+		<li><a href="4#"><img src="img/o_5.jpg" _href="4#" alt="图片五来咯" /></a></li>
+	</ul>
+    <div class="sub Alpha"></div>
+    <span class="sub"><a></a></span>
+</div>
+<div id="ll" class="Alpha"></div>
+</body>
+</html>

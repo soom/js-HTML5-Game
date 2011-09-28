@@ -1,0 +1,47 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+  <script src="SSlib_V2.0/SSlibV2.js" type="text/javascript"></script>
+  <script src="anima.js" type="text/javascript"></script>
+    <script language="javascript">
+        SS(window).load(function () {
+            anima.move({ id: "oo", goal: { x: 100, y:200 }, split: 2000 });
+            anima.Alpha({ id: "oo", now: 100, goal: 0, split: 2000 });
+            anima.size({ id: "oo", goal: { w: 50, h: 50 }, split: 2000 });
+
+            anima.move.defer(2000, window, [{ id: "oo", goal: { x: 200, y: 8 }, split: 2000}]);
+            anima.Alpha.defer(2000, window, [{ id: "oo", now: 0, goal: 100, split: 2000}]);
+            anima.size.defer(2000, window, [{ id: "oo", goal: { w: 100, h: 100 }, split: 2000}]);
+
+            anima.move.defer(4000, window, [{ id: "oo", goal: { x: 300, y: 200 }, split: 2000}]);
+            anima.Alpha.defer(4000, window, [{ id: "oo", now: 100, goal: 0, split: 2000}]);
+            anima.size.defer(4000, window, [{ id: "oo", goal: { w: 50, h: 50 }, split: 2000}]);
+
+            anima.move({ id: "cc", goal: { x: 100, y: 200 }, split: 2000 });
+            anima.move.defer(2000, window, [{ id: "cc", goal: { x: 400, y: 400 }, split: 200}]);
+            anima.move.defer(2200, window, [{ id: "cc", goal: { x: 100, y: 400 }, split: 200}]);
+            anima.move.defer(2400, window, [{ id: "cc", goal: { x: 8, y: 8 }, split: 200}]);
+            (function () { SS("#cc").html("嘿嘿，等一会儿！"); }).defer(2600);
+            (function () { SS("#cc").html(""); }).defer(3400);
+            anima.move.defer(3400, window, [{ id: "cc", goal: { x: 800, y: 8 }, split: 200}]);
+            SS("#cc").dd("se");
+        });
+    </script>
+</head>
+<body>
+<div style="width:100px; height:100px; border:1px red solid; position:absolute;" id="oo"></div>
+<div id="bb"></div>
+<div style="width:100px; height:100px; border:1px green solid;  position:absolute;" id="cc"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<a onclick="SS.anima.stop()">停止所有动画</a>
+</body>
+</html>

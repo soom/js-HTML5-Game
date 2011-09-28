@@ -1,0 +1,28 @@
+﻿*,body,html,table,tr,td{
+	padding:0px;
+	margin:0px;
+	background:#DFE8F6;
+}
+#main{
+    border:1px solid #000;
+    border-width:1px 0 0 1px;
+    margin:50px auto;
+    text-align:center;
+    border-collapse:collapse;
+}
+td{
+    border:1px solid #000;
+    border-width:0 1px 1px 0;
+    margin:2px 0 2px 0;
+    text-align:left;
+    height:30px;
+    width:30px;
+}
+h1{text-align:center; color:#083772; margin-top:10px;}
+h4{text-align:center; color:#083772; margin-top:10px;}
+div{ margin:0 auto; width:300px; text-align:center;} 
+.c1{ display:inline-block; width:10px; height:10px; background:Blue;}
+.c2{ display:inline-block; width:10px; height:10px; background:red;}
+.c3{ display:inline-block; width:10px; height:10px; background:Gray;}
+.c4{ display:inline-block; width:10px; height:10px; background:Yellow; }
+.c5{ display:inline-block; width:10px; height:10px; background:green; }

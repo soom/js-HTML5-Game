@@ -1,0 +1,83 @@
+﻿*,body,html,table,tr,td{
+	padding:0px;
+	margin:0px;
+	background:#DFE8F6;
+}
+#main{
+    border:1px solid #aaa;
+    margin:50px auto;
+    height:381px;
+    width:352px;
+    position:relative;
+    padding:2px;
+}
+#mainBox
+{
+	border:1px solid #666;
+	position:absolute;
+	left:2px;
+	height:379px;
+    width:232px;
+    margin:0px;
+    overflow:hidden;
+	}
+#nextBox
+{
+	border:1px solid #666;
+	position:absolute;
+	height:84px;
+	width:85px;
+	top:40px;
+	left:245px;
+	 padding-bottom:1px;
+	 padding-top:1px;
+}
+#titlebox
+{
+		text-align:left;
+		padding-top:10px;
+		left:250px;
+		position:absolute;
+		height:40px;
+		 width:80px;
+}
+#cmdbox
+{
+		text-align:left;
+		padding-top:10px;
+		top:140px;
+		left:245px;
+		position:absolute;
+		height:40px;
+		width:80px;
+		font-size:12px;
+		font-weight:700;
+		line-height:25px;
+}
+#cmdbox input
+{
+	width:80px;
+	margin:8px;
+	}
+#cmdbox i
+{
+	font-style:normal;
+	font-size:12px;
+	font-weight:normal;
+	}
+span{
+position:absolute; border:1px solid #777; margin:1px;
+}
+#mainBox span{ width:18px;  height:18px;}
+#nextBox span{ width:18px; height:18px;}
+*{ 
+-moz-user-select:nonedd 
+}
+h1{text-align:center; color:#083772; margin-top:10px;}
+div{ margin:0 auto; width:300px; text-align:center;}
+h4{text-align:center; color:#083772; margin-top:10px; font-size:16px;} 
+#outtxt{
+	 position:absolute;
+	 left:0;
+	 top:0;
+	}
